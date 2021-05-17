@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NewPersonForm from './NewPersonForm';
+import FamousPerson from './FamousPerson';
 
 const FamousPersonsList = ({setSelectedPerson}) => {
 
@@ -40,9 +41,7 @@ const FamousPersonsList = ({setSelectedPerson}) => {
   return (
       <div>
         {persons.map((person, index) => (
-              <div className="person" onClick={() => handleClick(person)}>
-                <button>{person.first_name + " " + person.second_name}</button>
-              </div>
+          <FamousPerson person={person} setSelectedPerson={setSelectedPerson} />
             ))}
             <br />
             
