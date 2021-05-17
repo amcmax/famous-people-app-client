@@ -6,7 +6,13 @@
   grid-template: auto 1fr auto / auto 1fr auto
 }
 
-// etc
+label {
+  margin-right: 5px;
+}
+
+input {
+  float: right;
+}
 
 .App {
   background: #09d7e6ff;
