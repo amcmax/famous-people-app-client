@@ -38,10 +38,18 @@ const FamousPersonsList = ({setSelectedPerson}) => {
     setPersons([...persons, person]);
   };
 
+  const removePerson = id => {
+    axios.delete( '/api/v1/persons/' + id )
+        .then(response => {
+          setPersons(persons.filter(person => person.id !== id))
+        })
+        .catch(error => console.log(error))
+  };
+
   return (
       <div>
         {persons.map((person, index) => (
-          <FamousPerson person={person} setSelectedPerson={setSelectedPerson} />
+          <FamousPerson person={person} setSelectedPerson={setSelectedPerson} removePerson={removePerson} />
             ))}
             <br />
             

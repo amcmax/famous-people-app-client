@@ -59,6 +59,11 @@ button {
   background-color: transparent;
 }
 
+.remove {
+  font-size: smaller;
+  margin-left: 10px;
+}
+
 footer {
   background: #faf5f5ff;
   padding: 2rem;
